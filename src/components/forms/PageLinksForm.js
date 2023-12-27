@@ -18,13 +18,13 @@ export default function PageLinksForm({page,user}) {
   }
   function addNewLink() {
     setLinks(prev => {
-      return [...prev, {
+      return [ {
         key: Date.now().toString(),
         title:'',
         subtitle:'',
         icon:'',
         url:'',
-      }];
+      },...prev];
     });
   }
   function handleUpload(ev, linkKeyForUpload) {
